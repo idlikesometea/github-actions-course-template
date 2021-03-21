@@ -5,10 +5,12 @@ on:
     types: [opened, edited]
   issue_comment:
     types: [created, edited]
-   
+
+name: GIPHY Generator
+
 jobs:
   giphy-generator:
-    name: GIPHY generator
+    name: GIPHY Generator
     runs-on: ubuntu-latest
     steps:
       - name: GIPHY Generator
