@@ -1,3 +1,5 @@
+name: GIPHY generator
+
 on:
   issues:
     types: [opened, edited]
@@ -6,15 +8,12 @@ on:
   issue_comment:
     types: [created, edited]
 
-name: GIPHY Generator
-
 jobs:
   giphy-generator:
-    name: GIPHY Generator
     runs-on: ubuntu-latest
+
     steps:
       - name: GIPHY Generator
-        id: giphy_generator
         uses: IAmHughes/giphy-generator@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -22,4 +21,3 @@ jobs:
         with:
           rating: 'g'
           lang: 'en'
-          
